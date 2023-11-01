@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+
+            <div class="business-card">
+                <div class="front-side">
+                    <div class="h1_container">
+                        <h1 class="h1">
+                            Vinnitskiy Yaroslav
+                        </h1>
+                    </div>
+
+                    <p class="p_class">19 y.o. the 2 course of MCT FEFU.</p>
+
+                    <div class="socials">
+                        <a href=""><img src="img/vk_logo.svg"/></a>
+                        <a href=""><img src="img/telegram_logo.svg"></a>
+                        <a href=""><img src="img/email_logo.svg"></a>
+                        <a href=""><img src="img/github_logo.svg"></a>
+                    </div>
+                </div>
+                <div class="back-side">
+                    <div class="h1_container_back">
+                        <h1 class="h1_back">
+                            My development stack
+                        </h1>
+                    </div>
+
+
+                    <div class="technology-stack">
+                        <div class="column">
+
+                            <div class="icon-group">
+                                <img src="img/swift_logo.svg" class="icon">
+                                <p class="p_back_class">Swift</p>
+                            </div>
+                            <div class="icon-group">
+                                <img src="img/Java_logo.svg" class="icon">
+                                <p class="p_back_class">Java</p>
+                            </div>
+                            <div class="icon-group">
+                                <img src="img/spring_logo.svg" class="icon">
+                                <p class="p_back_class">Spring</p>
+                            </div>
+                            <div class="icon-group">
+                                <img src="img/postgresql_logo.svg" class="icon">
+                                <p class="p_back_class">PostgreSQL</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="icon-group">
+                                <img src="img/react_logo.svg" class="icon">
+                                <p class="p_back_class">React</p>
+                            </div>
+                            <div class="icon-group">
+                                <img src="img/vue_js_logo.svg" class="icon">
+                                <p class="p_back_class">Vue.js</p>
+                            </div>
+                            <div class="icon-group">
+                                <img src="img/c_icon.svg" class="icon">
+                                <p class="p_back_class">C++</p>
+                            </div>
+                            <div class="icon-group">
+                                <img src="img/c_sharp_logo.svg" class="icon">
+                                <p class="p_back_class">C#</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="icon-group">
+                                <img src="img/flask_logo.svg" class="icon">
+                                <p class="p_back_class">Flask</p>
+                            </div>
+                            <div class="icon-group">
+                                <img src="img/django_logo.svg" class="icon">
+                                <p class="p_back_class">Django</p>
+                            </div>
+                            <div class="icon-group">
+                                <img src="img/Python_logo.svg" class="icon">
+                                <p class="p_back_class">Python</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const businessCard = document.querySelector('.business-card');
+
+                const socialLinks = businessCard.querySelectorAll('.socials a');
+
+                socialLinks.forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                    });
+                });
+
+                businessCard.addEventListener('click', () => {
+                    if (!event.target.closest('.socials')) {
+                        businessCard.classList.toggle('flipped');
+                    }
+                });
+            </script>
+    </section>
+</body>
+</html>
